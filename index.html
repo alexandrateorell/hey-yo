@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang=en>
+  <head>
+      <meta charset="utf-8">
+      <title>Hey yo!</title>
+      <link href="./main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1>Hey yo!</h1>
+    <h2>Today's a great day.</h2>
+    <div class="inputSection">
+      <div class="inputs">
+        <input placeholder="Don't you think?"></input>
+      </div>
+      <button class="addOption">Agreed</button>
+    </div>
+    <h6>Have some champage to make it even better.</h6>
+          <button class="GoOption">Yes sir</button>
+      <div class="resultSection">
+
+    <img src="https://i.huffpost.com/gen/1194885/thumbs/o-CHEERS-LEONARDO-DICAPRIO-570.jpg?5" alt="dicaprio" height="300" width="500">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+
+        $('.addOption').click(add_option)
+      })
+    </script>
+  </bod y>
+</html>
