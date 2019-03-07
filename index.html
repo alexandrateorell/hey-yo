@@ -1,35 +1,53 @@
 <!doctype html>
 <html lang=en>
   <head>
-      <meta charset="utf-8">
+      <meta charset=utf-8>
       <title>Hey yo!</title>
       <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Hey yo!</h1>
-    <h2>Today's a great day.</h2>
+    <h1>It's a fine day for champagne!</h1>
+    <h1 class="second">So,</h1>
+    <h2>Will you have some?</h2>
     <div class="inputSection">
       <div class="inputs">
-        <input placeholder="Don't you think?"></input>
+        <input placeholder="Yes? No? Maybe?"></input>
       </div>
-      <button class="addOption">Agreed</button>
+      <button class="addOption">Add</button>
     </div>
-    <h6>Have some champage to make it even better.</h6>
-          <button class="GoOption">Yes sir</button>
-      <div class="resultSection">
 
+    <div class="resultSection"></div>
+    <h4>That's what I thought.</h4>
+    <button class="GoOption">Cheers</button>
     <img src="https://i.huffpost.com/gen/1194885/thumbs/o-CHEERS-LEONARDO-DICAPRIO-570.jpg?5" alt="dicaprio" height="300" width="500">
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
       $(function() {
         $('.resultSection').hide()
-
+        $('h4').hide()
+        $('.second').hide()
         var add_option = function() {
           $('.inputs').append('<input></input>')
         }
-
         $('.addOption').click(add_option)
+
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display', 'flex')
+          $('h4').css('display', 'flex')
+          $('h1').hide()
+          $('.second').css('display', 'flex')
+          $('input').each(function() {
+            options.push($(this).val())
+          })
+          var winner = options[Math.floor(Math.random() * options.length)]
+          console.log(winner)
+          $('.resultSection').text(winner)
+        }
+        $('.GoOption').click(submit)
       })
     </script>
   </bod y>

@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom, #ffffff 1%, #ffffcc 100%);
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,4 +49,12 @@ button {
   color: white;
   flex-direction: center;
   justify-content: center;
+}
+
+.resultSection {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
 }
